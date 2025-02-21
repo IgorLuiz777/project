@@ -1,4 +1,3 @@
-import React from "react";
 import { ChevronRight, Star, Users, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 
