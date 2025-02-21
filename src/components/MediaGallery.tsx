@@ -30,7 +30,7 @@ const mediaContent = {
       description: "Tecnologia avançada para diagnósticos precisos",
     },
     {
-      url: getMediaPath("image3.png", "images"),
+      url: getMediaPath("image4.png", "images"),
       title: "Equipe Especializada",
       description: "Profissionais altamente qualificados",
     },
