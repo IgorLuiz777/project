@@ -1,11 +1,11 @@
-import { Phone, Mail, MapPin, Send, Clock, MessageSquare, Car } from 'lucide-react';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { Phone, MapPin, Send, Clock, MessageSquare, Car } from "lucide-react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Contact() {
-  const [nome, setNome] = useState('');
-  const [mensagem, setMensagem] = useState('');
+  const [nome, setNome] = useState("");
+  const [mensagem, setMensagem] = useState("");
   const [isHovered, setIsHovered] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -39,46 +39,52 @@ export default function Contact() {
       title: "Telefone",
       value: "(11) 2909-0730",
       link: "tel:+551129090730",
-      description: "Atendimento rápido e eficiente"
+      description: "Atendimento rápido e eficiente",
     },
     {
       icon: Clock,
       title: "Horário",
       value: "Seg-Sex: 9h às 18h",
-      description: "Sábado: 9h às 14h"
+      description: "Sábado: 9h às 14h",
     },
     {
       icon: MapPin,
       title: "Endereço",
       value: "R. Eduardo Leopoldo, 85",
       description: "Vila Guilherme, São Paulo - SP",
-      link: "https://maps.google.com/?q=R.+Eduardo+Leopoldo,+85+-+Vila+Guilherme,+São+Paulo+-+SP"
-    }
+      link: "https://maps.google.com/?q=R.+Eduardo+Leopoldo,+85+-+Vila+Guilherme,+São+Paulo+-+SP",
+    },
   ];
 
   const features = [
     {
       icon: MessageSquare,
       title: "Atendimento Personalizado",
-      description: "Cada cliente recebe atenção individual e dedicada"
+      description: "Cada cliente recebe atenção individual e dedicada",
     },
     {
       icon: Car,
       title: "Diagnóstico Gratuito",
-      description: "Avaliação inicial sem compromisso"
-    }
+      description: "Avaliação inicial sem compromisso",
+    },
   ];
 
   const enviarMensagemHandler = () => {
-    window.open(`https://wa.me/5511995376773?text=Olá me chamo ${nome}. \n ${mensagem}`, '_blank');
+    window.open(
+      `https://wa.me/5511995376773?text=Olá me chamo ${nome}. \n ${mensagem}`,
+      "_blank"
+    );
   };
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden bg-gradient-to-b from-white to-secondary/10">
+    <section
+      id="contact"
+      className="py-32 relative overflow-hidden bg-gradient-to-b from-white to-secondary/10"
+    >
       {/* Background Elements */}
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-      
+
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -98,20 +104,27 @@ export default function Contact() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Pronto para transformar seu{' '}
+            Pronto para transformar seu{" "}
             <span className="text-primary relative">
               veículo
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 358 12" fill="none">
-                <path d="M3 9C118.957 4.47226 274.497 2.86548 355 3.00001" stroke="#FF6B00" strokeWidth="6" strokeLinecap="round"/>
+              <svg
+                className="absolute -bottom-2 left-0 w-full"
+                viewBox="0 0 358 12"
+                fill="none"
+              >
+                <path
+                  d="M3 9C118.957 4.47226 274.497 2.86548 355 3.00001"
+                  stroke="#FF6B00"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                />
               </svg>
             </span>
             ?
           </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-gray-600 text-lg"
-          >
-            Entre em contato conosco e descubra como podemos ajudar você a manter seu carro sempre em perfeitas condições.
+          <motion.p variants={itemVariants} className="text-gray-600 text-lg">
+            Entre em contato conosco e descubra como podemos ajudar você a
+            manter seu carro sempre em perfeitas condições.
           </motion.p>
         </div>
 
@@ -151,7 +164,9 @@ export default function Contact() {
                     <info.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">{info.title}</h3>
+                    <h3 className="font-semibold text-gray-900">
+                      {info.title}
+                    </h3>
                     {info.link ? (
                       <a
                         href={info.link}
@@ -172,10 +187,7 @@ export default function Contact() {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
-            variants={itemVariants}
-            className="relative"
-          >
+          <motion.div variants={itemVariants} className="relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -184,10 +196,13 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Envie sua mensagem
               </h3>
-              
+
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Seu Nome
                   </label>
                   <motion.input
@@ -199,9 +214,12 @@ export default function Contact() {
                     placeholder="Digite seu nome"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Sua Mensagem
                   </label>
                   <motion.textarea
@@ -213,7 +231,7 @@ export default function Contact() {
                     placeholder="Como podemos ajudar?"
                   />
                 </div>
-                
+
                 <motion.button
                   onClick={enviarMensagemHandler}
                   whileHover={{ scale: 1.02 }}
@@ -223,7 +241,11 @@ export default function Contact() {
                   className="w-full bg-primary text-white py-4 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-primary-dark transition-colors group"
                 >
                   <span>Enviar Mensagem</span>
-                  <Send className={`w-5 h-5 transition-transform duration-300 ${isHovered ? 'translate-x-2' : ''}`} />
+                  <Send
+                    className={`w-5 h-5 transition-transform duration-300 ${
+                      isHovered ? "translate-x-2" : ""
+                    }`}
+                  />
                 </motion.button>
               </div>
 

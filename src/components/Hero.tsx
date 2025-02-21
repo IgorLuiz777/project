@@ -1,12 +1,14 @@
-import React from 'react';
-import { ChevronRight, Star, Users, Clock, Shield } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ChevronRight, Star, Users, Clock, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-screen flex items-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen flex items-center overflow-hidden"
+    >
       {/* Background Video/Image with Parallax Effect */}
-      <motion.div 
+      <motion.div
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
@@ -19,7 +21,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/90 to-dark/50" />
       </motion.div>
-      
+
       {/* Floating Elements */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -30,9 +32,9 @@ export default function Hero() {
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-secondary/20 rounded-full blur-3xl" />
       </motion.div>
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -50,35 +52,35 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
-            Transforme seu carro em uma{' '}
+            Transforme seu carro em uma{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-primary">obra-prima!</span>
               <motion.span
-                initial={{ width: '0%' }}
-                animate={{ width: '100%' }}
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
                 transition={{ delay: 1, duration: 0.8 }}
                 className="absolute bottom-0 left-0 h-3 bg-primary/20 rounded-full"
               />
             </span>
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
             className="text-xl text-secondary mb-12 leading-relaxed"
           >
-            Mais de 1000 clientes satisfeitos confiam em nossa expertise para cuidar de seus veículos.
-            Agende agora e ganhe diagnóstico gratuito!
+            Mais de 1000 clientes satisfeitos confiam em nossa expertise para
+            cuidar de seus veículos. Agende agora e ganhe diagnóstico gratuito!
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}

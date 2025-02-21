@@ -1,7 +1,6 @@
-import React from 'react';
-import { MapPin, Navigation, Clock, Phone } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { MapPin, Navigation, Clock, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Location() {
   const [ref, inView] = useInView({
@@ -62,16 +61,25 @@ export default function Location() {
           >
             Localização
           </motion.span>
-          
+
           <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold text-gray-900 mb-6"
           >
-            Venha nos{' '}
+            Venha nos{" "}
             <span className="text-primary relative">
               visitar
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 358 12" fill="none">
-                <path d="M3 9C118.957 4.47226 274.497 2.86548 355 3.00001" stroke="#FF6B00" strokeWidth="6" strokeLinecap="round"/>
+              <svg
+                className="absolute -bottom-2 left-0 w-full"
+                viewBox="0 0 358 12"
+                fill="none"
+              >
+                <path
+                  d="M3 9C118.957 4.47226 274.497 2.86548 355 3.00001"
+                  stroke="#FF6B00"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                />
               </svg>
             </span>
           </motion.h2>
@@ -84,7 +92,8 @@ export default function Location() {
               <div>
                 <h3 className="font-semibold text-gray-900">Endereço</h3>
                 <p className="text-gray-600">
-                  R. Eduardo Leopoldo, 85<br />
+                  R. Eduardo Leopoldo, 85
+                  <br />
                   Vila Guilherme, São Paulo - SP
                 </p>
               </div>
@@ -95,9 +104,12 @@ export default function Location() {
                 <Clock className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900">Horário de Funcionamento</h3>
+                <h3 className="font-semibold text-gray-900">
+                  Horário de Funcionamento
+                </h3>
                 <p className="text-gray-600">
-                  Segunda a Sexta: 9h às 18h<br />
+                  Segunda a Sexta: 9h às 18h
+                  <br />
                   Sábado: 9h às 14h
                 </p>
               </div>
@@ -129,7 +141,7 @@ export default function Location() {
               <Navigation className="w-5 h-5 mr-2 transform group-hover:-rotate-12 transition-transform" />
               Como Chegar
             </a>
-            
+
             <a
               href="tel:+551129090730"
               className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors"
