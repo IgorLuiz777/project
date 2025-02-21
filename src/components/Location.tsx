@@ -40,7 +40,7 @@ export default function Location() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="grayscale"
+          className="invert hue-rotate-180"
         ></iframe>
       </div>
 
